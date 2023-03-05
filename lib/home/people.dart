@@ -84,7 +84,7 @@ class _PeoplePageState extends State<PeoplePage> {
                             borderRadius: BorderRadius.circular(16.0),
                             image: DecorationImage(
                               image: NetworkImage(
-                                'https://picsum.photos/300/300?random=$index',
+                                'https://randomuser.me/api/portraits/men/$index.jpg',
                               ),
                               fit: BoxFit.cover,
                             ),

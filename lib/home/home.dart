@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -121,11 +123,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  storyContainer('assets/images/s1.jpg'),
-                  storyContainer('assets/images/s1.jpg'),
-                  storyContainer('assets/images/s1.jpg'),
-                  storyContainer('assets/images/s1.jpg'),
-                  storyContainer('assets/images/s1.jpg'),
+                  storyContainer('assets/images/s4.jpg'),
+                  storyContainer('assets/images/s2.jpg'),
+                  storyContainer('assets/images/s3.jpg'),
+                  storyContainer('assets/images/s4.jpg'),
+                  storyContainer('assets/images/s5.jpg'),
                   storyContainer('assets/images/s1.jpg'),
                 ],
               ),
@@ -143,8 +145,8 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(1.0),
             child: Column(
               children: [
-                postContainer('assets/images/s1.jpg'),
-                postContainer('assets/images/s1.jpg')
+                postContainer('assets/images/post.jpg'),
+                postContainer('assets/images/post.jpg')
               ],
             ),
           ),
@@ -170,7 +172,14 @@ class _HomePageState extends State<HomePage> {
                   width: 70,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    border: Border.all(color: Colors.green, width: 3),
+                    border: Border.all(
+                        color: Color.fromARGB(
+                          255,
+                          Random().nextInt(256),
+                          Random().nextInt(256),
+                          Random().nextInt(256),
+                        ),
+                        width: 3),
                     image: DecorationImage(
                         image: AssetImage(image), fit: BoxFit.cover),
                   ),
@@ -178,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 90,
                   child: Text(
-                    'jaydeep_hirani',
+                    'king david xuwu',
                     style: TextStyle(fontSize: 12),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
@@ -195,7 +204,6 @@ class _HomePageState extends State<HomePage> {
 
   Widget postContainer(image) {
     return Container(
-      
       padding: EdgeInsets.symmetric(vertical: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

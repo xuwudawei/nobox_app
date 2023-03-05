@@ -103,8 +103,8 @@ class _MarketPageState extends State<MarketPage> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.0),
             image: DecorationImage(
-              image: NetworkImage(
-                'https://picsum.photos/300/300?random=3',
+              image: AssetImage(
+                'assets/images/product1.jpg',
               ),
               fit: BoxFit.cover,
             ),
@@ -130,7 +130,7 @@ class _MarketPageState extends State<MarketPage> {
                   crossAxisCount: 2,
                   mainAxisSpacing: 0,
                   children: List.generate(
-                    10,
+                    4,
                     (index) => Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
@@ -140,8 +140,8 @@ class _MarketPageState extends State<MarketPage> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.0),
                             image: DecorationImage(
-                              image: NetworkImage(
-                                'https://picsum.photos/300/300?random=$index',
+                              image: AssetImage(
+                                'assets/images/t$index.jpg',
                               ),
                               fit: BoxFit.cover,
                             ),

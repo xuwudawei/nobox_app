@@ -54,6 +54,39 @@ class _MarketPageState extends State<MarketPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Container(
+          height: 40.0,
+          margin: EdgeInsets.only(top: 10, left: 10.0, right: 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: Colors.grey.withOpacity(0.2),
+          ),
+          child: Row(
+            children: [
+              SizedBox(width: 16.0),
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Search for something',
+                    hintStyle: TextStyle(
+                      color: Colors.grey.withOpacity(0.6),
+                      fontSize: 18.0,
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.grey.withOpacity(0.6),
+                ),
+                onPressed: () {},
+              ),
+              SizedBox(width: 16.0),
+            ],
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
@@ -64,11 +97,33 @@ class _MarketPageState extends State<MarketPage> {
             ),
           ),
         ),
-        
+        Container(
+          height: 140,
+          margin: EdgeInsets.only(left: 10.0, right: 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16.0),
+            image: DecorationImage(
+              image: NetworkImage(
+                'https://picsum.photos/300/300?random=3',
+              ),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            '#All #equpiments #drill #powermachine #hardware #machine #software',
+            style: TextStyle(
+              fontSize: 12.0,
+              color: Colors.grey,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         Expanded(
           child: CustomScrollView(
             slivers: [
-              
               SliverPadding(
                 padding: EdgeInsets.all(0),
                 sliver: SliverGrid.count(
@@ -91,7 +146,6 @@ class _MarketPageState extends State<MarketPage> {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 11.0, top: 5),

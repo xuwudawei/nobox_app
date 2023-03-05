@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nobox_app/home/tabs.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -33,7 +34,8 @@ class _LandingPageState extends State<LandingPage> {
                 height: MediaQuery.of(context).size.height / 20,
               ),
               ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => tabs())),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
                   onPrimary: Colors.black,

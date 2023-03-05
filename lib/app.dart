@@ -22,7 +22,7 @@ class _AppState extends State<App> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: tabs(),
+      home: const LandingPage(),
     );
   }
 }
